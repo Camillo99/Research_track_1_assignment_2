@@ -1,5 +1,5 @@
 
-#  Research track 1, assignment 1
+#  Research track 1, assignment 2
 
 ## Description of the assignment
 
