@@ -36,6 +36,9 @@ In this node is also contained the implementation of the server for handling the
 handle the interface with the user and, using the service Userparameter, communicate with the control node.
 
 
+![](node_scheme.png)
+
+
 
 ## Control scheme
 
