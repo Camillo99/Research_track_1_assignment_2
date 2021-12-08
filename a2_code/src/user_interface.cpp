@@ -3,7 +3,7 @@
 #include "sensor_msgs/LaserScan.h"
 #include "std_msgs/String.h"
 #include "iostream"
-#include "second_assignment/Userparameter.h"
+#include "a2_code/Userparameter.h"
 #include "std_srvs/Empty.h"
 
 using namespace std;
@@ -55,8 +55,8 @@ int main (int args, char **argv){
     ros::NodeHandle nh;
     
     //create a service to interract with the control node
-    ros::ServiceClient client = nh.serviceClient<second_assignment::Userparameter>("/userparameter");
-    second_assignment::Userparameter srv1;
+    ros::ServiceClient client = nh.serviceClient<a2_code::Userparameter>("/userparameter");
+    a2_code::Userparameter srv1;
     
     //create a service to call the reset position service
     ros::ServiceClient client2 = nh.serviceClient<std_srvs::Empty>("/reset_positions");

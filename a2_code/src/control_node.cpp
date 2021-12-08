@@ -8,7 +8,7 @@
 #include "std_msgs/String.h"
 #include "iostream"
 #include "math.h"
-#include "second_assignment/Userparameter.h"
+#include "a2_code/Userparameter.h"
 using namespace std;
 
 
@@ -153,7 +153,7 @@ void robotCallback(const sensor_msgs::LaserScan::ConstPtr& msg){
  * if input == 1 -> increase
  * if input == -1 -> decrease
  */
-bool velocity_parameter(second_assignment::Userparameter::Request &req, second_assignment::Userparameter::Response &res){
+bool velocity_parameter(a2_code::Userparameter::Request &req, a2_code::Userparameter::Response &res){
     
     if( req.user_value > 0 ){
         //increase
