@@ -155,19 +155,23 @@ void robotCallback(const sensor_msgs::LaserScan::ConstPtr& msg){
  */
 bool velocity_parameter(a2_code::Userparameter::Request &req, a2_code::Userparameter::Response &res){
     
-    if( req.user_value > 0 ){
-        //increase
-        parameter = parameter + 0.2;
+    if( req.user_value !=0 ){
+        
+        if( req.user_value > 0 ){
+            //increase
+            parameter = parameter + 0.2;
+        }
+        else{
+            //decrease
+            if( parameter > 0.2 )
+                parameter = parameter - 0.2;
+        }   
+        //gives as response the actual value of the parameter
+        res.multiplier = parameter;
+        return true;
     }
-    else{
-        //decrease
-        parameter = parameter - 0.2;
-    }   
-    //gives as response the actual value of the parameter
-    res.multiplier = parameter;
+    
     return true;
-    
-    
 }
 
 /* initialize the ros node
